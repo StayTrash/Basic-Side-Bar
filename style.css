@@ -1,0 +1,126 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+.main-box {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background: url(IMG_0161.JPG) right no-repeat;
+}
+.sidebar-menu {
+    position: fixed;
+    height: 100vh;
+    width: 280px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+    left: -280px;
+    transition: all 0.3s linear;
+}
+.logo {
+    position: absolute;
+    height: 60px;
+    width: 100%;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+}
+.logo a {
+    position: absolute;
+    font-size: 25px;
+    font-weight: 500;
+    color: palegoldenrod;
+    left: 50px;
+    line-height: 60px;
+    text-decoration: none;
+}
+.menu {
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    /* transition: all 0.3s linear; */
+}
+.menu li {
+    margin-top: 6px;
+    padding: 5px 20px;
+    transition: all 0.3s linear;
+}
+.menu i {
+    font-size: 20px;
+    padding: 8px;
+    color:rgb(136, 187, 85);
+}
+.menu a {
+    text-decoration: none;
+    font-size: 20px;
+    color: blanchedalmond;
+    font-weight: 500;
+}
+.menu li:hover {
+    border-left: 1px solid #fff;
+    box-shadow: 0 0 4px rgba(23, 220, 197, 0.5);
+    background: rgba(255, 255, 255, 0.15);
+}
+.social-media {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    list-style: none;
+    cursor: pointer;
+}
+.social-media i {
+    padding: 0 5px;
+    color:rgb(136, 187, 85);
+    opacity: 0.6;
+    font-size: 20px;
+    transition: all 0.2s linear;
+    text-decoration: none;
+}
+.social-media i:hover {
+    opacity: 1;
+    transition: all 0.25s linear;
+    transform: scale(1.05);
+}
+#check {
+    display: none;
+}
+.btn-one i {
+    color: blanchedalmond;
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    left: 16px;
+    line-height: 60px;
+    cursor: pointer;
+    opacity: 1;
+    transition: all 0.2s linear;
+}.btn-two i {
+    color: blanchedalmond;
+    font-size: 25px;
+    font-weight: 700;
+    position: absolute;
+    left: 240px;
+    line-height: 60px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+.btn-one i:hover {
+    font-size: 29px;
+}
+.btn-two i:hover {
+    font-size: 24px;
+}
+#check:checked ~ .sidebar-menu {
+    left: 0;
+}
+#check:checked ~ .btn-one i {
+    opacity: 0;
+}
+#check:checked ~ .sidebar-menu .btn-two i {
+    opacity: 1;
+}
